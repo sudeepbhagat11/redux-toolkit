@@ -1,0 +1,38 @@
+
+
+body{
+  margin-top: 100px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  background-color: rgb(22, 22, 56);
+  
+}
+.admin-subtitle{
+  font-size: 3rem;
+  margin-bottom: 20px;
+ 
+}
+
+li{
+  list-style: none;
+  margin-top: 15px;
+  
+  font-style: italic;
+  font-weight: bold;
+  margin-left: 80px;
+  margin-bottom: 15px;
+}
+
+.btn-space{
+  margin-left: 10px;
+}
+
+.btn-center{
+  display: flex;
+  justify-content: center;
+
+}
+
+
