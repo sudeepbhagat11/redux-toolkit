@@ -6,6 +6,10 @@ import { fakeUser } from '../api';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../store/slices/UserSlice';
 import DisplayUser from './DisplayUser';
+import { Card, ListGroup } from 'react-bootstrap';
+
+
+
 const UserDetails = () => {
   const dispatch = useDispatch();
   const addNewUser = (payload) =>{
@@ -15,20 +19,23 @@ const UserDetails = () => {
   }
   return (
     <>
-        <div className='content'>
-            <div className='admin-table'>
+        
                 <div class = "admin-subtitle">Click to Add Users </div> 
-                <div class = "btn-center">
+            <Card className="card-light-blue">
+              <Card.Body className="text-center">
                 <Button class = "btn" variant= "outline-primary" onClick={ () => addNewUser(fakeUser()) }>Add New Users</Button>
-                </div>
-            </div>
-            <ul class = "li-center">
+               
+            <div className = "card-light-blue">
+            <ListGroup variant = "flush" >
                 <DisplayUser />
-            </ul>
+            </ListGroup>
+            </div>
 
             <hr />
             <DeleteUser />
-        </div>
+            </Card.Body>
+          </Card>
+        
     </>
   )
 }

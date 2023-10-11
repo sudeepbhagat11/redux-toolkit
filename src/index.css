@@ -33,6 +33,13 @@ li{
   display: flex;
   justify-content: center;
 
+
+
+}
+
+.card-light-blue {
+  background-color: rgb(49, 79, 125);
+  color: white;
 }
 
 

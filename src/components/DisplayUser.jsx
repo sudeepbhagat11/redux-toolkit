@@ -3,6 +3,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { MdAccountBalance } from "react-icons/md";
 import { removeUser } from '../store/slices/UserSlice';
 import { Trash } from 'react-bootstrap-icons';
+import { ListGroup, Row, Col } from "react-bootstrap";
 
 
 
@@ -23,16 +24,22 @@ const DisplayUser = () => {
   return (
     // <div>DisplayUser</div>
     data.map((user,id) => {  //Printing data stored in data variable
-        return <li key = {id}> 
+        return <ListGroup.Item className = "card-light-blue"key = {id}> 
+        <Row>
+        <Col md = {10}>
         {user}
-        <span class = "btn-space">
+        </Col>
+
+        <Col md = {2}>
+        
         <Trash onClick={() =>{
             RemoveUser(id);
 
         }}/>
-        </span>
+        </Col>
+        </Row>
         
-        </li>
+        </ListGroup.Item>
     })
   )
 }
